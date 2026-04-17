@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ServConnect</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body {
@@ -88,6 +89,17 @@
             margin-bottom: 20px;
             font-size: 13px;
         }
+        .password-wrapper { position: relative; width: 100%; }
+        .toggle-password { 
+            position: absolute; 
+            right: 12px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            cursor: pointer; 
+            user-select: none;
+            color: #888;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +119,10 @@
         </div>
         <div class="input-group">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Masukkan password" required>
+            <div class="password-wrapper">
+                <input type="password" name="password" id="password" placeholder="Masukkan password" required>
+                <span class="material-icons toggle-password" onclick="togglePassword()">visibility_off</span>
+            </div>
         </div>
         <button type="submit" name="login">Masuk ke Akun</button>
     </form>
@@ -116,6 +131,23 @@
         Belum punya akun? <a href="registrasi.php">Daftar Sekarang</a>
     </div>
 </div>
+
+<script>
+
+    // Fungsi Lihat/Sembunyi Password dengan Material Icons
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.querySelector(".toggle-password");
+            
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.innerText = "visibility"; // Ikon mata terbuka
+            } else {
+                passwordField.type = "password";
+                toggleIcon.innerText = "visibility_off"; // Ikon mata tertutup garis
+            }
+        }
+</script>
 
 </body>
 </html>
