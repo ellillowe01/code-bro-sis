@@ -63,7 +63,7 @@
 
 <div class="register-container">
     <h2>Daftar Akun</h2>
-    <p>Bergabunglah dengan ServConnect</p>
+    <p>Bergabunglah dengan ServeConnect</p>
 
     <form action="proses_registrasi.php" method="POST">
         <div class="input-group">
