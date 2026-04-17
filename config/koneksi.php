@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "serveconnect"; 
+$db = "serveconnect";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
