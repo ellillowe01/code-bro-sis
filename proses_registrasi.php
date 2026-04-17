@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include 'config/koneksi.php';
 
 if (isset($_POST['register'])) {
     $name     = mysqli_real_escape_string($conn, $_POST['name']);
