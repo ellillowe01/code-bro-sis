@@ -69,7 +69,7 @@
             </div>
             
             <div class="input-group">
-                <label>Password <span style="color: #888; font-weight: normal; font-size: 11px;">(Min. 8 Karakter)</span></label>
+                <label>Password <span style="color: #888; font-weight: normal; font-size: 11px;">(Min. 8 Karakter. Huruf Besar, Kecil, Angka)</span></label>
                 <div class="password-wrapper">
                     <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                     <span class="material-icons toggle-password" onclick="togglePassword()">visibility_off</span>
